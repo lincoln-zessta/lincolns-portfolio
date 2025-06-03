@@ -1,0 +1,70 @@
+/* src/components/Pages/HomePage.css */
+
+.home-container {
+  padding: 20px;
+  max-width: 900px; /* Limit width for better readability on large screens */
+  margin: 0 auto; /* Center the content */
+  line-height: 1.7; /* Improve readability of paragraphs */
+  color: #333; /* Default text color */
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.home-header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: #2c3e50; /* A darker blue-gray for the name */
+}
+
+.home-header .tagline {
+  font-size: 1.2em;
+  color: #7f8c8d; /* A softer gray for the tagline */
+  font-style: italic;
+}
+
+.about-me h2 {
+  font-size: 2em;
+  color: #34495e; /* Another shade of blue-gray */
+  border-bottom: 2px solid #3498db; /* A blue accent for the section title */
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  display: inline-block; /* To make the border only as wide as the text */
+}
+
+.about-me p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.about-me a {
+  color: #3498db; /* Blue for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-me a:hover {
+  text-decoration: underline;
+  color: #2980b9; /* Darker blue on hover */
+}
+
+/* Optional: Styles for a profile photo */
+.profile-photo-container {
+  text-align: center; /* Or float left/right */
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.profile-photo {
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover; /* Ensures the image covers the area well */
+  border: 5px solid #eee;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
