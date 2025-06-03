@@ -1,0 +1,70 @@
+/* src/components/UI/ProjectCard.css */
+
+.project-card {
+  background-color: #ffffff; /* White background for the card */
+  border: 1px solid #e0e0e0; /* A slightly lighter border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 25px; /* More padding inside the card */
+  margin: 20px 0; /* Margin above and below each card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+  display: flex; /* Using flexbox for internal layout */
+  flex-direction: column; /* Stack items vertically */
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Slightly raise the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+.project-card h3 {
+  margin-top: 0; /* Remove default top margin from h3 */
+  margin-bottom: 15px;
+  font-size: 1.75em; /* Larger project title */
+  color: #333; /* Darker text color for title */
+}
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px; /* Slightly rounded corners for images */
+  margin-bottom: 20px;
+  object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.project-card p {
+  font-size: 1em;
+  line-height: 1.6; /* Better readability for description */
+  color: #555; /* Slightly lighter text for description */
+  flex-grow: 1; /* Allows the description to take up available space */
+  margin-bottom: 20px;
+}
+
+.project-card .technologies {
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+.project-card .technologies strong {
+  color: #444;
+}
+
+.project-card .project-links {
+  margin-top: auto; /* Pushes links to the bottom if card height varies */
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0; /* A light separator line above links */
+}
+
+.project-card .project-links a {
+  text-decoration: none;
+  color: #007bff; /* Standard link blue */
+  margin-right: 15px;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.project-card .project-links a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline;
+}

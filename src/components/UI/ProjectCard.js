@@ -1,30 +1,23 @@
 // src/components/UI/ProjectCard.js
 import React from 'react';
-// import './ProjectCard.css'; // We'll create this later for styling
+import './ProjectCard.css'; // Import the CSS file
 
 const ProjectCard = ({ project }) => {
-  // Destructure the project prop to easily access its properties
   const { title, description, imageUrl, technologies, githubLink, liveDemoLink } = project;
 
   return (
-    <div className="project-card" style={{
-      border: '1px solid #ddd',
-      borderRadius: '8px',
-      padding: '20px',
-      margin: '20px 0',
-      boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-    }}>
+    <div className="project-card"> {/* Main class for styling */}
       <h3>{title}</h3>
-      {imageUrl && <img src={imageUrl} alt={title} style={{ maxWidth: '100%', height: 'auto', marginBottom: '15px' }} />}
+      {imageUrl && <img src={imageUrl} alt={title} />}
       <p>{description}</p>
       {technologies && technologies.length > 0 && (
-        <div style={{ marginBottom: '15px' }}>
+        <div className="technologies"> {/* Class for technologies section */}
           <strong>Technologies:</strong> {technologies.join(', ')}
         </div>
       )}
-      <div className="project-links">
+      <div className="project-links"> {/* Class for links section */}
         {githubLink && (
-          <a href={githubLink} target="_blank" rel="noopener noreferrer" style={{ marginRight: '10px' }}>
+          <a href={githubLink} target="_blank" rel="noopener noreferrer">
             View Code (GitHub)
           </a>
         )}
