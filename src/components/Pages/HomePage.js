@@ -13,7 +13,7 @@ const HomePage = () => {
       <section className="about-me">
         <h2>About Me</h2>
         <p>
-          Hello! I'm Mervin Lincoln, a recent Computer Science and Systems Engineering graduate from Andhra University (Class of April 2025).
+          Hello! I'm Mervin Lincoln Vemu, a recent Computer Science and Systems Engineering graduate from Andhra University, 2025.
           I am currently honing my skills as a Software Engineer Intern at Zessta, where I'm gaining hands-on experience with
           Java, Spring Boot, ReactJS, TypeScript, and DevOps practices including Docker and Kubernetes.
         </p>

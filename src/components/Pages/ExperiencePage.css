@@ -1,0 +1,15 @@
+/* src/components/Pages/ExperiencePage.css */
+.experience-page-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience-page-container h2 {
+  font-size: 2em;
+  color: #34495e;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  display: inline-block;
+}
