@@ -1,13 +1,19 @@
-// src/data/projectData.js
+// src/data/ProjectData.js
 export const projects = [
   {
     id: 1,
     title: "NLP-Based Resume Screening System",
-    description: "Automates recruitment by intelligently parsing job descriptions and resumes...",
-    imageUrl: "/assets/images/nlp-project.png", // Path to your image in public/assets or src/assets
-    technologies: ["Python", "Streamlit", "PyMuPDF", "SQLite"],
-    githubLink: "https://github.com/Mervin769/your-repo-name",
-    liveDemoLink: "your-live-demo-url" // if available
+    description: "Designed to automate and enhance the recruitment process...",
+    technologies: ["Python", "PyMuPDF", "Streamlit"], // etc.
+    githubLink: "your-github-link",
+    // ... other properties
   },
-  // ... more projects
+  {
+    id: 2,
+    title: "Multi-document Text Extraction (Nodeitx)",
+    description: "Led a crucial project...",
+    technologies: ["Python", "Machine Learning", "Neo4j"],
+    // ... other properties
+  },
+  // ... all your other projects
 ];

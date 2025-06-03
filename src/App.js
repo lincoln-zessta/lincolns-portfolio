@@ -1,9 +1,11 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
-// Import your page components
+import Navbar from './components/Layout/Navbar';
+import Footer from './components/Layout/Footer'; // Import the Footer component
+
 import HomePage from './components/Pages/HomePage';
 import ProjectsPage from './components/Pages/ProjectsPage';
 import ExperiencePage from './components/Pages/ExperiencePage';
@@ -12,23 +14,19 @@ import ContactPage from './components/Pages/ContactPage';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <nav style={{ marginBottom: '20px', paddingBottom: '10px', borderBottom: '1px solid #ccc' }}>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', gap: '15px' }}>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/experience">Experience</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </nav>
+      <div className="App" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}> {/* Added styles for sticky footer effect */}
+        <Navbar />
 
-        {/* Define the routes for your pages */}
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/experience" element={<ExperiencePage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
+        <main style={{ padding: '20px', flexGrow: 1 }}> {/* Added flexGrow: 1 */}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/experience" element={<ExperiencePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </main>
+
+        <Footer /> {/* Use the Footer component here */}
       </div>
     </Router>
   );
