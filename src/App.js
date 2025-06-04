@@ -11,6 +11,7 @@ import ProjectsPage from './components/Pages/ProjectsPage';
 import ExperiencePage from './components/Pages/ExperiencePage';
 import ContactPage from './components/Pages/ContactPage';
 import SkillsPage from './components/Pages/SkillsPage'; // <--- 1. IMPORT SkillsPage HERE
+import CertificationsPage from './components/Pages/CertificationsPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/experience" element={<ExperiencePage />} />
             <Route path="/skills" element={<SkillsPage />} /> {/* <--- 2. ADD THE ROUTE FOR SKILLS HERE */}
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/certifications" element={<CertificationsPage />} />
           </Routes>
         </main>
 
