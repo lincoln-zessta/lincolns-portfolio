@@ -63,3 +63,66 @@
   width: 100%; /* Full underline for active link */
   background-color: #3498db;
 }
+/* src/components/Layout/Navbar.css */
+
+/* ... (all your existing Navbar CSS rules) ... */
+
+/* Media Query for smaller screens (e.g., less than 768px wide) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack logo and links vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 15px; /* Adjust padding if needed */
+  }
+
+  .navbar-logo {
+    margin-bottom: 15px; /* Add some space below the logo */
+    align-self: center; /* Center the logo when stacked */
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Stack links vertically */
+    width: 100%; /* Make the ul take full width */
+    align-items: center; /* Center the links */
+    gap: 0; /* Remove horizontal gap, manage spacing with li/a padding */
+  }
+
+  .navbar-links li {
+    width: 100%; /* Make each list item take full width */
+    text-align: center; /* Center text in each link */
+    margin-bottom: 5px; /* Add a small space between stacked links */
+  }
+
+  .navbar-links li a {
+    padding: 12px 0; /* Adjust padding for better tap targets */
+    display: block; /* Make the link take full width of li */
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0; /* Optional: separator between links */
+  }
+  .navbar-links li:last-child a {
+    border-bottom: none; /* Remove border from last link */
+  }
+
+  .navbar-links li a::after {
+    /* Optional: you might want to disable or adjust the underline effect
+       for stacked links if it doesn't look good. For now, it will remain. */
+    left: 0; /* Adjust underline position for full width */
+    transform: translateX(0);
+    /* If you want to hide it on mobile: display: none; */
+  }
+  .navbar-links li a:hover::after,
+  .navbar-links li a.active-nav-link::after {
+    width: 50%; /* Or adjust as you like for mobile */
+    left: 25%;
+  }
+}
+
+/* You might want another breakpoint for very small screens if needed */
+@media (max-width: 480px) {
+  .navbar-logo a {
+    font-size: 1.6em; /* Slightly smaller logo on very small screens */
+  }
+  .navbar-links li a {
+    font-size: 1.1em; /* Slightly larger tap area text */
+  }
+}
