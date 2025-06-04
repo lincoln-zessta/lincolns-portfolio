@@ -1,0 +1,12 @@
+/* src/components/UI/SkillItem.css */
+.skill-item {
+  background-color: #e7f3fe; /* Light blue background */
+  color: #0056b3; /* Darker blue text */
+  padding: 8px 15px;
+  border-radius: 20px; /* Pill shape */
+  margin: 5px;
+  font-size: 0.95em;
+  font-weight: 500;
+  display: inline-block; /* Allows them to flow nicely */
+  border: 1px solid #cce0f5;
+}

@@ -24,6 +24,7 @@ const Navbar = () => {
         <li><Link to="/" style={{ textDecoration: 'none', color: '#333' }}>Home</Link></li>
         <li><Link to="/projects" style={{ textDecoration: 'none', color: '#333' }}>Projects</Link></li>
         <li><Link to="/experience" style={{ textDecoration: 'none', color: '#333' }}>Experience</Link></li>
+        <li><Link to="/skills" style={{ textDecoration: 'none', color: '#333' }}>Skills</Link></li>
         {/* Add links for Skills, Certifications later if you want them in the main nav */}
         <li><Link to="/contact" style={{ textDecoration: 'none', color: '#333' }}>Contact</Link></li>
       </ul>
