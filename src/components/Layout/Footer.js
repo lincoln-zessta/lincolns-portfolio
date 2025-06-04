@@ -1,27 +1,25 @@
 // src/components/Layout/Footer.js
 import React from 'react';
-// You might want to add a CSS file for the Footer later
-// import './Footer.css';
+import './Footer.css'; // Import the CSS file
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear(); // Get the current year
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer style={{
-      textAlign: 'center',
-      padding: '20px',
-      borderTop: '1px solid #ccc',
-      marginTop: '40px', // Add some space above the footer
-      backgroundColor: '#f8f8f8' // Consistent with the navbar example
-    }}>
+    <footer className="app-footer"> {/* Use className from CSS file */}
       <p>&copy; {currentYear} Vemu Mervin Lincoln. All Rights Reserved.</p>
-      {/* You can add links to your social profiles here too if you like */}
-      {/* For example:
-      <div>
-        <a href="https://github.com/Mervin769" target="_blank" rel="noopener noreferrer" style={{margin: '0 10px'}}>GitHub</a>
-        <a href="https://www.linkedin.com/in/mervinlincolnvemu" target="_blank" rel="noopener noreferrer" style={{margin: '0 10px'}}>LinkedIn</a>
+      <div className="footer-links">
+        {/* Example social links - uncomment and update hrefs if you want to use them */}
+        {/*
+        <a href="https://github.com/Mervin769" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/mervinlincolnvemu" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+        */}
+        {/* Add other links like LeetCode, etc. if you wish */}
       </div>
-      */}
     </footer>
   );
 };

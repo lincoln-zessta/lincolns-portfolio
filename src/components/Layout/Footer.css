@@ -1,0 +1,32 @@
+/* src/components/Layout/Footer.css */
+.app-footer {
+  text-align: center;
+  padding: 25px 20px; /* Increased padding a bit */
+  border-top: 1px solid #ddd; /* Slightly softer border, consistent with Navbar */
+  margin-top: auto; /* This helps push it to the bottom if using flex in App.js */
+  background-color: #ffffff; /* White background, consistent with Navbar */
+  color: #555; /* Softer text color */
+  font-size: 0.9em;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05); /* Subtle shadow for Footer, on the top */
+}
+
+.app-footer p {
+  margin: 0 0 10px 0; /* Add some margin below the copyright text */
+}
+
+.footer-links { /* Optional: For social links */
+  margin-top: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #007bff; /* Standard link blue */
+  margin: 0 12px; /* Space out social links */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline;
+}
