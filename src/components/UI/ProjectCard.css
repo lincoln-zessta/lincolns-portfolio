@@ -68,3 +68,51 @@
   color: #0056b3; /* Darker blue on hover */
   text-decoration: underline;
 }
+/* src/components/UI/ProjectCard.css */
+
+/* ... (all your existing ProjectCard CSS rules) ... */
+
+/* Media Query for smaller screens (e.g., less than 768px wide) */
+@media (max-width: 768px) {
+  .project-card {
+    margin: 20px 10px; /* Adjust margin for smaller screens if needed */
+    padding: 20px; /* Adjust padding if needed */
+  }
+
+  .project-card h3 {
+    font-size: 1.5em; /* Slightly smaller title on mobile */
+  }
+
+  .project-card p {
+    font-size: 0.95em; /* Adjust paragraph font size for mobile */
+  }
+
+  .project-card .technologies {
+    font-size: 0.85em; /* Adjust technologies font size */
+  }
+
+  .project-card .project-links a {
+    display: block; /* Make links take full width for easier tapping */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add space between stacked links */
+    text-align: center; /* Center link text */
+    padding: 10px; /* Add padding to make them more like buttons */
+    border: 1px solid #007bff;
+    border-radius: 4px;
+  }
+
+  .project-card .project-links a:last-child {
+    margin-bottom: 0; /* No margin for the last link */
+  }
+}
+
+/* For very small screens, if further adjustments are needed */
+@media (max-width: 480px) {
+  .project-card {
+    margin: 15px 5px;
+    padding: 15px;
+  }
+  .project-card h3 {
+    font-size: 1.3em;
+  }
+}
