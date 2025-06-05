@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="app-footer"> {/* Use className from CSS file */}
+    <footer className="app-footer">
       <p>&copy; {currentYear} Vemu Mervin Lincoln. All Rights Reserved.</p>
       <div className="footer-links">
         {/* Example social links - uncomment and update hrefs if you want to use them */}
@@ -18,7 +18,6 @@ const Footer = () => {
           LinkedIn
         </a>
         */}
-        {/* Add other links like LeetCode, etc. if you wish */}
       </div>
     </footer>
   );

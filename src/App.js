@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css'; // Ensure this is imported
+import './App.css'; // Make sure this file exists and includes app-content styles
 
 import Navbar from './components/Layout/Navbar';
 import Footer from './components/Layout/Footer';
@@ -16,9 +16,9 @@ import CertificationsPage from './components/Pages/CertificationsPage';
 function App() {
   return (
     <Router>
-      <div className="App"> {/* Inline styles removed */}
+      <div className="App">
         <Navbar />
-        <main className="app-content"> {/* Inline styles removed, added className */}
+        <main className="app-content">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<ProjectsPage />} />
