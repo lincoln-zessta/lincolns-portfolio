@@ -1,4 +1,3 @@
-/* src/components/Pages/SkillsPage.css */
 .skills-page-container {
   padding: 20px;
   max-width: 900px;
@@ -29,4 +28,27 @@
   padding: 0;
   display: flex; /* Allows skills to wrap nicely */
   flex-wrap: wrap; /* Skills will wrap to the next line if not enough space */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .skills-page-container h2 {
+    font-size: 1.7em;
+  }
+  .skill-category h3 {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-page-container h2 {
+    font-size: 1.5em;
+  }
+  .skill-category h3 {
+    font-size: 1.1em;
+  }
+
+  .skills-page-container {
+    padding: 15px;
+  }
 }

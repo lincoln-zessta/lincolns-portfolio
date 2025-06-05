@@ -1,12 +1,34 @@
 /* src/components/UI/SkillItem.css */
+
+/* Base styles for Skill Item */
 .skill-item {
-  background-color: #e7f3fe; /* Light blue background */
-  color: #0056b3; /* Darker blue text */
-  padding: 8px 15px;
-  border-radius: 20px; /* Pill shape */
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  padding: 8px 16px;
   margin: 5px;
-  font-size: 0.95em;
+  font-size: 1em;
+  color: #333;
+  display: inline-block;
   font-weight: 500;
-  display: inline-block; /* Allows them to flow nicely */
-  border: 1px solid #cce0f5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item:hover {
+  background-color: #e0e0e0;
+}
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+  .skill-item {
+    padding: 6px 12px;  /* Adjust padding for smaller screens */
+    font-size: 0.95em;  /* Slightly smaller font */
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .skill-item {
+    padding: 5px 10px;  /* Further reduce padding */
+    font-size: 0.9em;  /* Reduce font size on smaller screens */
+  }
 }
