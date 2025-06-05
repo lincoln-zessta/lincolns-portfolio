@@ -15,56 +15,107 @@
   border-bottom: 1px solid #eee;
 }
 
+/* Responsive heading size using clamp() as you suggested - this replaces the fixed font-size */
 .home-header h1 {
-  font-size: 2.8em;
+  font-size: clamp(1.8em, 5vw, 2.8em); /* Min, Preferred (Viewport Width based), Max */
   margin-bottom: 10px;
-  color: #2c3e50; /* A darker blue-gray for the name */
+  color: #2c3e50;
 }
 
 .home-header .tagline {
-  font-size: 1.2em;
-  color: #7f8c8d; /* A softer gray for the tagline */
+  font-size: clamp(1em, 3vw, 1.2em); /* Responsive tagline */
+  color: #7f8c8d;
   font-style: italic;
 }
 
 .about-me h2 {
-  font-size: 2em;
-  color: #34495e; /* Another shade of blue-gray */
-  border-bottom: 2px solid #3498db; /* A blue accent for the section title */
+  font-size: clamp(1.5em, 4vw, 2em); /* Responsive section heading */
+  color: #34495e;
+  border-bottom: 2px solid #3498db;
   padding-bottom: 10px;
   margin-bottom: 25px;
-  display: inline-block; /* To make the border only as wide as the text */
+  display: inline-block;
+  /* transition: all 0.3s ease; /* Optional: if you want hover effect */
 }
+
+/* Optional: if you want hover effect for h2 */
+/* .about-me h2:hover {
+  color: #2980b9;
+} */
 
 .about-me p {
   margin-bottom: 20px;
-  font-size: 1.1em;
+  font-size: 1.1em; /* Base size, adjust with clamp if needed or keep responsive via root em/rem */
   color: #555;
 }
 
 .about-me a {
-  color: #3498db; /* Blue for links */
+  color: #3498db;
   text-decoration: none;
   font-weight: bold;
 }
 
 .about-me a:hover {
   text-decoration: underline;
-  color: #2980b9; /* Darker blue on hover */
+  color: #2980b9;
 }
 
-/* Optional: Styles for a profile photo */
 .profile-photo-container {
-  text-align: center; /* Or float left/right */
+  text-align: center;
   margin-top: 30px;
   margin-bottom: 20px;
 }
 
 .profile-photo {
-  width: 200px; /* Adjust size as needed */
-  height: 200px; /* Adjust size as needed */
-  border-radius: 50%; /* Makes it circular */
-  object-fit: cover; /* Ensures the image covers the area well */
+  width: 200px; /* Max width on larger screens */
+  height: 200px; /* Corresponding height */
+  border-radius: 50%;
+  object-fit: cover;
   border: 5px solid #eee;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%; /* Ensures it scales down within its container if container is smaller */
+  /* height: auto; /* Let height adjust automatically when max-width scales it down */
+}
+
+/* ------------------ MEDIA QUERIES for specific overrides if clamp isn't enough or for layout changes ------------------ */
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 15px;
+  }
+
+  /* Clamp should handle font sizes, but you can override if needed */
+  /* .home-header h1 { font-size: 2.2em; } */
+  /* .home-header .tagline { font-size: 1.1em; } */
+  /* .about-me h2 { font-size: 1.7em; } */
+
+  .about-me p {
+    font-size: 1em;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-header {
+    margin-bottom: 20px; /* Reduced margin */
+    padding-bottom: 15px; /* Reduced padding */
+  }
+
+  /* .home-header h1 { font-size: 1.8em; } */
+  /* .home-header .tagline { font-size: 1em; } */
+  /* .about-me h2 { font-size: 1.5em; } */
+
+  .about-me p {
+    font-size: 0.95em;
+    margin-bottom: 15px; /* Reduced margin */
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
 }

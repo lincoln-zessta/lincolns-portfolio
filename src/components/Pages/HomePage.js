@@ -1,19 +1,26 @@
 // src/components/Pages/HomePage.js
 import React from 'react';
-import './HomePage.css'; // We'll create this CSS file next
+import './HomePage.css';
+import profileImage from '../../assets/profile.jpg'; // <--- IMPORT YOUR IMAGE
 
 const HomePage = () => {
   return (
-    <div className="home-container">
+    // Changed div to main for semantic HTML
+    <main className="home-container" aria-label="About Mervin Lincoln">
       <header className="home-header">
         <h1>VEMU MERVIN LINCOLN</h1>
-        <p className="tagline">Aspiring Software Engineer | JAVA Developer | Cyber Security Enthusiast</p>
+        <p className="tagline">Aspiring Software Engineer | CSE Graduate | Cyber Security Enthusiast</p>
       </header>
 
-      <section className="about-me">
-        <h2>About Me</h2>
+      {/* Optional: If you want to add a photo - NOW ENABLED */}
+      <div className="profile-photo-container">
+        <img src={profileImage} alt="Mervin Lincoln" className="profile-photo" loading="lazy" />
+      </div>
+
+      <section className="about-me" aria-labelledby="about-me-heading">
+        <h2 id="about-me-heading">About Me</h2>
         <p>
-          Hello! I'm Mervin Lincoln Vemu, a recent Computer Science and Systems Engineering graduate from Andhra University, 2025.
+          Hello! I'm Mervin Lincoln, a recent Computer Science and Systems Engineering graduate from Andhra University (Class of April 2025).
           I am currently honing my skills as a Software Engineer Intern at Zessta, where I'm gaining hands-on experience with
           Java, Spring Boot, ReactJS, TypeScript, and DevOps practices including Docker and Kubernetes.
         </p>
@@ -30,14 +37,8 @@ const HomePage = () => {
         <p>
           Feel free to explore my projects and experiences, and don't hesitate to <a href="/contact">get in touch</a>!
         </p>
-        {/*
-          Optional: If you want to add a photo
-          <div className="profile-photo-container">
-            <img src="/path/to/your/photo.jpg" alt="Mervin Lincoln" className="profile-photo" />
-          </div>
-        */}
       </section>
-    </div>
+    </main>
   );
 };
 
