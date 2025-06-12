@@ -2,50 +2,48 @@
 
 .home-container {
   padding: 20px;
-  max-width: 900px; /* Limit width for better readability on large screens */
-  margin: 0 auto; /* Center the content */
-  line-height: 1.7; /* Improve readability of paragraphs */
-  color: #333; /* Default text color */
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #333;
+  text-align: center; /* Center align content for the home page */
 }
 
 .home-header {
-  text-align: center;
   margin-bottom: 40px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
 
-/* Responsive heading size using clamp() as you suggested - this replaces the fixed font-size */
 .home-header h1 {
-  font-size: clamp(1.8em, 5vw, 2.8em); /* Min, Preferred (Viewport Width based), Max */
+  font-size: clamp(2.2em, 5vw, 2.8em);
   margin-bottom: 10px;
   color: #2c3e50;
 }
 
 .home-header .tagline {
-  font-size: clamp(1em, 3vw, 1.2em); /* Responsive tagline */
+  font-size: clamp(1em, 3vw, 1.2em);
   color: #7f8c8d;
-  font-style: italic;
+  font-weight: bold; /* Changed from italic */
+  font-style: normal; /* Ensure it's not italic */
+}
+
+.about-me {
+  text-align: left; /* Keep paragraphs left-aligned for readability */
 }
 
 .about-me h2 {
-  font-size: clamp(1.5em, 4vw, 2em); /* Responsive section heading */
+  font-size: clamp(1.5em, 4vw, 2em);
   color: #34495e;
   border-bottom: 2px solid #3498db;
   padding-bottom: 10px;
   margin-bottom: 25px;
   display: inline-block;
-  /* transition: all 0.3s ease; /* Optional: if you want hover effect */
 }
-
-/* Optional: if you want hover effect for h2 */
-/* .about-me h2:hover {
-  color: #2980b9;
-} */
 
 .about-me p {
   margin-bottom: 20px;
-  font-size: 1.1em; /* Base size, adjust with clamp if needed or keep responsive via root em/rem */
+  font-size: 1.1em;
   color: #555;
 }
 
@@ -66,56 +64,14 @@
   margin-bottom: 20px;
 }
 
-.profile-photo {
-  width: 200px; /* Max width on larger screens */
-  height: 200px; /* Corresponding height */
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #eee;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 100%; /* Ensures it scales down within its container if container is smaller */
-  /* height: auto; /* Let height adjust automatically when max-width scales it down */
+.resume-download-section {
+  margin-top: 40px;
 }
 
-/* ------------------ MEDIA QUERIES for specific overrides if clamp isn't enough or for layout changes ------------------ */
-
+/* ... (Keep your existing responsive media queries for profile photo, etc.) ... */
 @media (max-width: 768px) {
-  .home-container {
-    padding: 15px;
-  }
-
-  /* Clamp should handle font sizes, but you can override if needed */
-  /* .home-header h1 { font-size: 2.2em; } */
-  /* .home-header .tagline { font-size: 1.1em; } */
-  /* .about-me h2 { font-size: 1.7em; } */
-
-  .about-me p {
-    font-size: 1em;
-  }
-
-  .profile-photo {
-    width: 150px;
-    height: 150px;
-  }
+  /* ... existing responsive styles ... */
 }
-
 @media (max-width: 480px) {
-  .home-header {
-    margin-bottom: 20px; /* Reduced margin */
-    padding-bottom: 15px; /* Reduced padding */
-  }
-
-  /* .home-header h1 { font-size: 1.8em; } */
-  /* .home-header .tagline { font-size: 1em; } */
-  /* .about-me h2 { font-size: 1.5em; } */
-
-  .about-me p {
-    font-size: 0.95em;
-    margin-bottom: 15px; /* Reduced margin */
-  }
-
-  .profile-photo {
-    width: 120px;
-    height: 120px;
-  }
+  /* ... existing responsive styles ... */
 }

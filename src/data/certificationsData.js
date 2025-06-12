@@ -11,17 +11,17 @@ export const items = [
   {
     id: "cert2",
     type: "Certification",
-    title: "Python (Advanced)",
+    title: "JAVA (Advanced)", // Updated from Python
     issuer: "HackerRank",
-    date: "Date if available", // Add date if you have it
-    description: "Successfully passed the advanced Python proficiency test on HackerRank."
+    date: "Date if available",
+    description: "Successfully passed the advanced JAVA proficiency test on HackerRank."
   },
   {
     id: "cert3",
     type: "Certification",
     title: "Prompt Engineering",
-    issuer: "Vanderbilt University (Coursera/Online Platform)", // Specify platform if applicable
-    date: "September 2024", // Assuming this is a future completion as per earlier info
+    issuer: "Vanderbilt University",
+    date: "September 2024",
     description: "Certified in Prompt Engineering techniques for interacting with large language models."
   },
   {
@@ -37,7 +37,7 @@ export const items = [
     type: "Achievement",
     title: "Smart India Hackathon (SIH) - Runner-Up",
     issuer: "Smart India Hackathon",
-    date: "Date of SIH", // Add date if you have it
+    date: "Date of SIH",
     description: "Collaborated on the project “Optimizing Doctor Availability and Appointment Allocation in Hospitals through Digital Technology and AI Integration”, contributing expertise in RFID technology."
   },
   {

@@ -1,0 +1,33 @@
+/* src/components/Pages/ContactPage.css */
+.contact-page-container {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-page-container h2 {
+  font-size: 2.5em;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.contact-page-container p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-methods .btn {
+  /* Uses the global .btn style from index.css */
+  min-width: 250px;
+}
